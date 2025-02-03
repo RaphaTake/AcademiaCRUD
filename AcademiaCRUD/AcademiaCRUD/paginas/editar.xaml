@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaCRUD.paginas.editar"
+              BackgroundImageSource="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Image Source="https://i.postimg.cc/DzZ1mChx/alterar.png" WidthRequest="300" HeightRequest="300"/>
+                <Label Text="Alterar Cadastro"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                TextColor="#FF8A2BE2"/>
+                <Label Text="Digite o ID: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_id" FontSize="Medium"
+                TextColor="White" Keyboard="Numeric"/>
+                <Label Text="Nome: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_nome" FontSize="Medium"
+                TextColor="White"/>
+                <Label Text="Endereço: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_ende" FontSize="Medium"
+                TextColor="White"/>
+                <Label Text="Telefone: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_fone" FontSize="Medium"
+                TextColor="White" Keyboard="Numeric"/>
+                <Label Text="Idade: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_idade" FontSize="Medium"
+                TextColor="white" Keyboard="Numeric"/>
+                <Picker x:Name="picker_modalidade" Title="Selecione a modalidade" FontSize="Medium" TextColor="White" TitleColor="#FF8A2BE2">
+                    <Picker.Items>
+                        <x:String>Musculação</x:String>
+                        <x:String>Ginástica</x:String>
+                        <x:String>CrossFit</x:String>
+                        <x:String>Pilates</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="EDITAR" x:Name="btn_editar" FontSize="Medium"
+                TextColor="orange" CornerRadius="20" BorderColor="Black"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

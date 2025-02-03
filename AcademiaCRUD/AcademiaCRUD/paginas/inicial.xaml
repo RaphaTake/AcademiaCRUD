@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaCRUD.paginas.inicial"
+             BackgroundImageSource="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Image Source="https://i.postimg.cc/WdVmjm3L/cadastrar.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" HeightRequest="200"/>
+                <Label Text="Cadastrar"    
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                TextColor="#FF8A2BE2"/>
+                <Label Text="Nome: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_nome"  FontSize="Medium" BackgroundColor="black"
+                TextColor="White"/>
+                <Label Text="Endereço: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_ende" FontSize="Medium" BackgroundColor="black"
+                TextColor="White"/>
+                <Label Text="Fone: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_fone" FontSize="Medium" BackgroundColor="black"
+                TextColor="White" Keyboard="Numeric"/>
+                <Label Text="Idade: " FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_idade" FontSize="Medium" BackgroundColor="black"
+                TextColor="White" Keyboard="Numeric" />
+                <!--!Label x:Name=" lbl" FontSize="Medium"/>-->
+                <Picker x:Name="picker_modalidade" Title="Selecione a modalidade" FontSize="Medium" TextColor="White" TitleColor="#FF8A2BE2">
+                    <Picker.Items>
+                        <x:String>Musculação</x:String>
+                        <x:String>Ginástica</x:String>
+                        <x:String>CrossFit</x:String>
+                        <x:String>Pilates</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="ENVIAR" x:Name="btn_enviar" FontSize="Medium"
+                TextColor="Orange" VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" CornerRadius="20" BorderColor="Black"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

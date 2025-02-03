@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaCRUD.paginas.lista"
+              BackgroundImageSource="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Image Source="https://i.postimg.cc/KKvn3ZB0/lista.png[" HeightRequest="300"/>
+                <Label Text="Lista de Cadastros"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                TextColor="#FF8A2BE2"/>
+                <Button Text="RECARREGAR" x:Name="btn_recarregar"
+                    FontSize="Large" TextColor="Orange" CornerRadius="20"/>
+                <ListView x:Name="ls_alunos">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Id}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Nome}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Ende}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Fone}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Idade}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding modalidade}" FontSize="Medium" TextColor="White"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaCRUD.paginas.pesquisar"
+              BackgroundImageSource="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Image Source="https://i.postimg.cc/wynJrLPr/Pesquisar.png" WidthRequest="300" HeightRequest="300" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Pesquisa de Cadastro"  
+            VerticalOptions="Center"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="Large"
+            TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txtPesquisar" Placeholder="Digite o ID:" FontSize="Medium" Keyboard="Numeric"/>
+                <Button Text="PESQUISAR" x:Name="btn_pesquisar"
+                FontSize="Large" TextColor="Orange" CornerRadius="20"/>
+                <ListView x:Name="ls_alunos">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Id}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Nome}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Ende}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Fone}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding Idade}" FontSize="Medium" TextColor="White"/>
+                                    <Label Text=" | " />
+                                    <Label Text="{Binding modalidade}" FontSize="Medium" TextColor="White"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    
+    

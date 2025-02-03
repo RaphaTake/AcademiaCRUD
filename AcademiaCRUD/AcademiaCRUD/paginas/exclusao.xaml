@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaCRUD.paginas.exclusao"
+                BackgroundImageSource="fundo.png">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Padding="30">
+                <Image Source="https://i.postimg.cc/sQM7KwnS/excluir.png" WidthRequest="250" HeightRequest="250"/>
+                <Label Text="Excluir Cadastro" HorizontalOptions="CenterAndExpand"
+                FontSize="Large"
+                TextColor="#FF8A2BE2"/>
+                <Label Text="Digite o ID:" FontSize="Medium"
+                TextColor="#FF8A2BE2"/>
+                <Entry x:Name="txt_id" FontSize="Medium" Keyboard="Numeric"/>
+                <Button Text="EXCLUIR" x:Name="btn_excluir" FontSize="Medium"
+                TextColor="orange" CornerRadius="20"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
